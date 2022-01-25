@@ -16,9 +16,9 @@
   ],
   "scripts": {
     "prepack": "nuxt-module-build",
-    "play": "nuxi dev playground",
-    "play:build": "nuxi build playground",
-    "play:preview": "nuxi preview playground",
+    "dev": "nuxi dev playground",
+    "dev:build": "nuxi build playground",
+    "dev:preview": "nuxi preview playground",
     "prepare": "nuxt-module-build --stub && nuxi prepare playground"
   },
   "dependencies": {
@@ -29,6 +29,6 @@
     "@nuxt/module-builder": "latest",
     "@nuxtjs/eslint-config-typescript": "latest",
     "eslint": "latest",
-    "nuxt3": "3.0.0-27379487.e0cf2d7"
+    "nuxt3": "latest"
   }
 }
