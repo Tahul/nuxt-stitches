@@ -15,19 +15,22 @@ export default defineNuxtPlugin(nuxtApp => {
 
   const globalStyles = globalCss(global)
 
+  // Inject styles server-side
   nuxtApp.hook('vue:setup', () => {
-    globalStyles()
+    if (process.server) {
+      globalStyles()
 
-    const cssText = getCssText()
+      const cssText = getCssText()
 
-    useMeta({
-      style: [
-        {
-          id: 'stitches',
-          content: cssText
-        }
-      ]
-    })
+      useMeta({
+        style: [
+          {
+            id: 'stitches',
+            children: cssText
+          }
+        ]
+      })
+    }
   })
 
   return {

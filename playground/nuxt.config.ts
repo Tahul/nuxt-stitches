@@ -9,11 +9,11 @@ export default defineNuxtConfig({
     },
     theme: {
       colors: {
-        gray500: 'hsl(206,10%,76%)',
-        blue500: 'hsl(206,100%,50%)',
-        purple500: 'hsl(252,78%,60%)',
-        green500: 'hsl(148,60%,60%)',
-        red500: 'hsl(352,100%,62%)'
+        gray: 'hsl(206,10%,76%)',
+        blue: 'hsl(206,100%,50%)',
+        purple: 'hsl(252,78%,60%)',
+        green: 'hsl(148,60%,60%)',
+        red: 'hsl(352,100%,62%)'
       }
     }
   }

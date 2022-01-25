@@ -26,8 +26,9 @@ export default defineNuxtModule<StitchesModuleOptions>({
     themeMap: defaultThemeMap
   },
   setup(options, nuxt) {
-    const composablesDir = resolve(__dirname, './composables')
-    const pluginPath = resolve(__dirname, './plugin')
+    const runtimeDir = fileURLToPath(new URL('./runtime', import.meta.url))
+    const composablesDir = resolve(runtimeDir, './composables')
+    const pluginPath = resolve(runtimeDir, './plugin')
 
     // Default runtimeConfig
     nuxt.options.publicRuntimeConfig.stitches = defu(nuxt.options.publicRuntimeConfig.stitches, options)
@@ -40,7 +41,7 @@ export default defineNuxtModule<StitchesModuleOptions>({
 
     // Add composables
     nuxt.hook('autoImports:dirs', dirs => {
-      dirs.push(resolve(__dirname, './composables'))
+      dirs.push(composablesDir)
     })
   }
 })
