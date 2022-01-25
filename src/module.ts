@@ -34,7 +34,7 @@ export default defineNuxtModule<StitchesModuleOptions>({
     nuxt.options.publicRuntimeConfig.stitches = defu(nuxt.options.publicRuntimeConfig.stitches, options)
 
     // Transpile runtime parts
-    nuxt.options.build.transpile.push(composablesDir, pluginPath)
+    nuxt.options.build.transpile.push(runtimeDir)
 
     // Add plugin
     addPlugin(pluginPath)
