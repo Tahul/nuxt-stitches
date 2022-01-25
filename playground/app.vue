@@ -7,6 +7,8 @@
 </template>
 
 <script setup lang="ts">
+import { useStitches } from '../src/runtime/composables/useStitches'
+
 const { css } = useStitches()
 
 const elementStyle = css({

@@ -1,4 +1,6 @@
+import { defineNuxtPlugin, useRuntimeConfig } from '#app'
 import { createStitches, defaultThemeMap as _defaultThemeMap } from '@stitches/core'
+import { useMeta } from '#imports'
 
 export default defineNuxtPlugin(nuxtApp => {
   const { stitches } = useRuntimeConfig()

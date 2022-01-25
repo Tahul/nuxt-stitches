@@ -6,7 +6,7 @@ import type { CSS as StitchesCSS } from '@stitches/core'
 import type { ConfigType } from '@stitches/core/types/config'
 import defu from 'defu'
 
-export interface StitchesModuleOptions {
+export interface ModuleOptions {
   global?: StitchesCSS
   media?: ConfigType.Media
   theme?: ConfigType.Theme
@@ -14,7 +14,7 @@ export interface StitchesModuleOptions {
   themeMap?: ConfigType.ThemeMap
 }
 
-export default defineNuxtModule<StitchesModuleOptions>({
+export default defineNuxtModule<ModuleOptions>({
   meta: {
     name: 'nuxt-stitches',
     configKey: 'stitches'
@@ -45,12 +45,3 @@ export default defineNuxtModule<StitchesModuleOptions>({
     })
   }
 })
-
-declare module '@nuxt/schema' {
-  interface NuxtConfig {
-    stitches?: StitchesModuleOptions
-  }
-  interface NuxtOptions {
-    stitches?: StitchesModuleOptions
-  }
-}
